@@ -41,7 +41,6 @@ public class UpdateSaveProfileSettings {
         WebElement password = driver.findElement(By.id("user[password]"));
         password.click();
         password.sendKeys(userPassword);
-        Thread.sleep(1000);
         WebElement btnSignIn = driver.findElement(By.xpath("//input[@value='Sign in']"));
         btnSignIn.click();
 
@@ -108,7 +107,7 @@ public class UpdateSaveProfileSettings {
         signOut.click();
         expectedTitle = "Ultimate QA";
         if (driver.getTitle().equals(expectedTitle))
-            System.out.println("Step 8 : Passed, User is signed out to the homepage");
+            System.out.println("Step 8 : Passed, User is signed out");
         else
             System.out.println("Step 8 : Failed");
 
